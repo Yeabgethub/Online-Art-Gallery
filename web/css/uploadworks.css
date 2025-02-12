@@ -1,0 +1,197 @@
+/* CSS Variables for Reusability */
+:root {
+    --primary-bg: rgba(19, 35, 47, 0.9);
+    --secondary-bg: rgba(0, 0, 0, 0.8);
+    --accent-color: #4CAF50;
+    --hover-color: #45a049;
+    --text-color: #333;
+    --light-text: #f2f2f2;
+    --error-color: red;
+}
+
+/* Reset default styles */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background: url('https://d1inegp6v2yuxm.cloudfront.net/royal-academy/image/upload/c_limit,f_auto,w_1200/a8q37oxuq73vuqfynxux.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Titillium Web', sans-serif;
+    color: var(--text-color);
+}
+
+/* Header styles */
+header {
+    background-color: var(--secondary-bg);
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-family: 'Times', sans-serif;
+    text-align: center;
+    font-size: 3vw; /* Responsive font size */
+}
+
+/* Navigation styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+.navbar a {
+    color: var(--light-text);
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Upload container styles */
+.upload-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--primary-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+}
+
+/* Form styles */
+.form {
+    background: var(--primary-bg);
+    padding: 40px;
+    max-width: 60%;
+    margin: 40px auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Full width by default */
+}
+
+/* Button styles */
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+/* Image preview styles */
+#imagePreview {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+#imagePreview img {
+    width: 80px;
+    height: 90px;
+    object-fit: cover;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Preview container styles */
+.preview-container {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+.preview-container h3 {
+    margin-top: 0;
+}
+
+/* Note and error message styles */
+.note {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+}
+
+.error-message {
+    color: var(--error-color);
+    margin-top: 10px;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+    .upload-container {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 1.1em;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-bg);
+    color: var(--light-text);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

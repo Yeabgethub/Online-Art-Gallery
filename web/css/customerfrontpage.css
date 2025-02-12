@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    background-image: url('images/orange3.jpg');
+    margin: 0;
+    padding: 0;
+    color: black; /* Default text color */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+.navbar a {
+    color: #f2f2f2;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.artworks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.artwork {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    background-image: url('images/orange1.jpg');
+    width: calc(50% - 40px); /* Two artworks per row */
+    overflow: hidden;
+    position: relative; /* For better layering */
+}
+
+/* Slider styles */
+.slider {
+    display: flex;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    padding: 10px 0;
+}
+
+.slider img {
+    width: 100%; /* Full width */
+    height: 400px; /* Fixed height for uniformity */
+    border: none; /* Remove border */
+    margin-right: 10px; /* Space between images */
+    cursor: pointer; /* Indicate that the image is clickable */
+}
+
+.slider img:last-child {
+    margin-right: 0; /* Remove right margin for the last image */
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+    padding-top: 60px; /* Location of the box */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Width of the image in the modal */
+    max-width: 700px; /* Max width */
+}
+
+.close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer; /* Indicate that the close button is clickable */
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Artwork description */
+.artwork-description {
+    display: none; /* Hide description by default */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-left: 5px solid #007bff;
+}
+
+.artwork:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-container input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    outline: none; /* Remove outline on focus */
+}
+
+.search-container button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.search-container button:hover {
+    background-color: #45a049;
+}
+
+.comment-section {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-section input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.comment-section button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.comment-section button:hover {
+    background-color: #0056b3;
+}
+
+.comment {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+}
+
+.reply {
+    border-left: 2px solid #007BFF; /* Blue line for replies */
+    margin: 5px 0;
+    padding: 5px 10px;
+    background-color: #f9f9f9; /* Light background for replies */
+}
+
+.rating-section {
+    margin: 10px 0;
+}
+
+.star {
+    font-size: 24px;
+    color: lightgray; /* Default star color */
+    cursor: pointer;
+}
+
+.star:hover,
+.star.selected {
+    color: gold; /* Highlighted star color */
+}
+
+.rating-notification {
+    margin-top: 10px; /* Space between stars and notification */
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.rating-notification.success {
+    background-color: #e6ffed; /* Light green background for success */
+    color: #155724; /* Dark green text */
+    border-color: #c3e6cb; /* Green border */
+}
+
+.rating-notification.error {
+    background-color: #f8d7da; /* Light red background for error */
+    color: #721c24; /* Dark red text */
+    border-color: #f5c6cb; /* Red border */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    color: #f2f2f2;
+}
+
+/* Adjust media queries if needed */
+@media (max-width: 768px) {
+    .artwork {
+        width: 90%; /* Full width on smaller screens */
+        margin: 10px auto; /* Center artworks */
+    }
+    .search-container input[type="text"] {
+        width: 100%; /* Full width on mobile */
+    }
+}

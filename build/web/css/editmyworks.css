@@ -1,0 +1,172 @@
+/* General reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    background: url('https://d1inegp6v2yuxm.cloudfront.net/royal-academy/image/upload/c_limit,f_auto,w_1200/a8q37oxuq73vuqfynxux.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header style */
+header {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    padding: 20px 0;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+.navbar a {
+    color: #f2f2f2;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Form styles */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-control-file {
+    padding: 10px;
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Existing artworks list */
+.existing-artworks {
+    width: 90%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.list-group {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list-group-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 15px;
+    position: relative;
+}
+
+.img-thumbnail {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    color: #f2f2f2;
+}
+
+footer a {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and larger phones */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .form-container {
+        width: 95%;
+    }
+
+    .existing-artworks {
+        width: 95%;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+    }
+}.alert-danger {
+
+}

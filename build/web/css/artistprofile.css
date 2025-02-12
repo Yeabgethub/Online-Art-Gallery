@@ -1,0 +1,182 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background: url('https://d1inegp6v2yuxm.cloudfront.net/royal-academy/image/upload/c_limit,f_auto,w_1200/a8q37oxuq73vuqfynxux.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: white;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    justify-content: center; /* Centering the nav items */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.navbar-nav {
+    display: flex;
+    text-align: center;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px; /* Spacing between nav items */
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* Artist Card Styles */
+.artist-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.artist-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.artist-card img {
+    width: 100%; /* Responsive image */
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.artist-card:hover img {
+    transform: scale(1.1);
+}
+
+.artist-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.artist-info h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+/* Artist Info Paragraph Hover Effect */
+.artist-info p {
+    margin: 5px 0;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.artist-info p:hover {
+    color: #333; /* Darker color on hover */
+}
+
+/* Upload Container Styles */
+.upload-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(19, 35, 47, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.upload-container:hover {
+    transform: translateY(-5px);
+}
+
+.upload-container h3 {
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.upload-container h3:hover {
+    color: #f0a500; /* Change color on hover */
+}
+
+.upload-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-container input[type="file"] {
+    margin: 10px 0;
+}
+
+.upload-container button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.upload-container button:hover {
+    background-color: #45a049; /* Darker green */
+    transform: scale(1.05);
+}
+
+/* Form Styles */
+.form {
+    background: rgba(19, 35, 47, 0.9);
+    padding: 40px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+    .artist-card {
+        width: 90%;
+    }
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f2f2f2;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
